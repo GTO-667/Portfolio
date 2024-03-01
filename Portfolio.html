@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfoneuile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.projects {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-description {
+  flex-basis: calc(33.3% - 20px);
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+  .project-description p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .project-description .project-info {
+    margin-top: 12px;
+  }
+  h2 {
+    text-align: center;
+    margin-top: 50px; 
+  }
+
+ 
+.skills-container hr {
+    display: none; 
+}
+    @media screen and (max-width: 768px) {
+      .image-description {
+        display: flex;
+        flex-direction: column;
+      }
+      .w3-half {
+        width: 100%;
+      }
+      .Cv {
+        left: auto;
+        top: auto;
+        position: static;
+        margin-top: 10px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .header {
+        padding: 10px 0;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      .texte-p {
+        margin-top: 10px;
+      }
+      .Cv {
+        margin-top: 10px;
+        left: auto;
+      }
+    }
+
+#navbar a {
+  text-decoration: none;
+  margin: 0 20px;
+  color: black;
+  transition: color 0.3s;
+}
+
+
+#navbar a:hover {
+  color: #ff0000 !important; 
+}
+
+    .header a {
+    text-decoration: none;
+    margin: 0 20px;
+    color: black; 
+    transition: color 0.3s; 
+  }
+
+  .header a:hover {
+    color:  rgba(0, 188, 255, 0.9); 
+  }
+
+  .header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    transition: background-color 0.5s;
+    z-index: 1000;
+    top: 0;
+  }
+
+ .transparent-header {
+    background-color: rgba(245, 245, 245, 0.7);
+  }
+  .header a.w3-button {
+    background-color: transparent !important;
+  }
+
+
+  body {
+    padding-top: 80px;
+    margin: 0; 
+  }
+ 
+.skills-container {
+  position: relative;
+  left: 10%; 
+  margin-bottom: 50px;
+}
+
+
+.progress-bar {
+  width: 600%; 
+  margin-bottom: 20px;
+  height: 32px;
+}
+
+
+.progress-bar-fill {
+  height: 32px;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #00b7ff;
+  width: 0;
+  transition: width 2s ease;
+  font-size: 18px;
+}
+
+
+
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Cardo", sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  padding: 10px; 
+}
+    .w3-row-padding img {
+      margin-bottom: 12px;
+    }
+
+    .bgimg {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('image/Enzo.jpg');
+      min-height: 100%;
+    }
+
+    .Cv {
+      background-color: rgb(0, 140, 255);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 20px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .Cv:hover {
+      background-color: #6f3cd4; 
+    }
+
+    .texte-p {
+      color: rgb(255, 255, 255);
+      text-align: justify;
+      margin-top: 20px;
+    }
+
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Cardo", serif; 
+    }
+
+.w3-button {
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+.w3-button:hover {
+  background-color: #00ccff;
+  color: #ffffff; 
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <header class="header" id="navbar">
+      <h1>Mon Portfolio</h1>
+      <a href="#" class="w3-button">Home</a>
+      <a href="#portfolio" class="w3-button">Portfolio</a>
+      <a href="#contact" class="w3-button">Contact</a>
+
+    </header>
+  <!-- Main Content -->
+  <div class="image-description-container">
+    <!-- Image et Description -->
+    <div class="image-description" style="background-color: #000000;">
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+            <img src="image/Enzo.jpg" class="w3-image w3-round" style="width:100%;max-width:400px;margin:auto;">
+          </header>
+        </div>
+        <div class="w3-half">
+          <header class="w3-container" style="padding:128px 16px" id="home">
+            <h1 class="w3-jumbo"><b style="color: white;">Bammé Enzo</b></h1>
+            <h2 style="color: white;">Développeur Web</h2>
+            <p class="texte-p">En tant qu'étudiant intéressé par le développement web, j'ai acquis les bases du HTML et du CSS. Mon objectif est de maîtriser ces langages pour créer des sites web attrayants. Même si je suis débutant, ma motivation à apprendre et à progresser est inébranlable. J'ai hâte d'acquérir des compétences en JavaScript pour rendre mes sites plus interactifs. Mon portfolio reflète mes compétences actuelles et mon parcours d'apprentissage.</p>
+            <!-- Bouton CV -->
+            <div class="cvc"> 
+              <a href="image/CV_enzo.pdf" download="NomDuCV.pdf" class="Cv">
+                <i class="fa fa-download"></i> Télécharger mon CV
+              </a>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Projets -->
+<div class="projects" style="display: flex;">
+    <div class="w3-padding-32 w3-content" id="portfolio">
+        <h2 class="texte-P" style="text-align: center;">Mes Projets</h2>
+        <hr class="w3-opacity">
+        <div class="w3-row-padding" style="display: flex; justify-content: space-between;">
+            <!-- Premier Projet -->
+            <div class="project-description" style="flex: 1; display: flex; flex-direction: column; align-items: center; margin-right: 20px;">
+                <a href="file:///Users/enzobamme/Desktop/Olympe/index.html">
+                    <img src="image/Site.png" style="width: 100%">
+                </a>
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <p><span style="font-weight: bold;">Olympe Communication</span></p>
+                </div>
+                <div style="text-align: center;">
+                    <p class="project-info">
+                        Ce projet fut conçu lors de mon stage. Il s'agit d'un site web interactif mettant en valeur les services de l'entreprise.
+                    </p>
+                </div>
+            </div>
+            <!-- Deuxième Projet -->
+            <div class="project-description" style="flex: 1; display: flex; flex-direction: column; align-items: center; margin-right: 20px;">
+                <a href="file:///Users/enzobamme/Desktop/ENKI/dist/index.html">
+                    <img src="image/site2.png" style="width: 100%">
+                </a>
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <p><span style="font-weight: bold;">Enki</span></p>
+                </div>
+                <div style="text-align: center;">
+                    <p class="project-info">
+                       Enki est un site avec des animations attrayantes en javascript et css réalisé lors d'un partiel avec un thème libre.
+                    </p>
+                </div>
+            </div>
+            <!-- Troisième Projet -->
+            <div class="project-description" style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+                <video width="100%" controls>
+                    <source src="image/neuille.mp4" type="video/mp4">
+                </video>
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <p><span style="font-weight: bold; position: relative; top: 6px;">Créative Lab</span></p>
+               </div>
+                <div style="text-align: center;">
+                    <p class="project-info">
+                        Projet vidéo réalisé lors d'un projet dont le thème fut l'eau. A l'aide d'after effect j'ai réalisé l'intro de notre vidéo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Compétences -->
+<div class="skills-container" style="position: relative; left: 26%;">
+    <h2 style="color: black; position: relative; right: 26%;">Mes compétences</h2>
+    <!-- Première ligne horizontale -->
+    <hr class="w3-opacity" style="width: 10%; position: relative; left: -122px;">
+    
+  <div class="skills" style="display: inline-block; text-align: left;">
+    <div style="margin-bottom: 16px;">
+      <p class="w3-wide" style="text-transform: capitalize; font-size: 18px;">HTML</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" style="width: 0%;" data-percentage="70">
+          <span style="font-size: 18px;">70%</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+        <p class="w3-wide" style="text-transform: capitalize; font-size: 18px;">CSS</p>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" style="width: 0%;" data-percentage="60"> <!-- Ajout de l'attribut data-percentage -->
+            <span style="font-size: 18px;">0%</span> <!-- Le texte affiché initialement -->
+          </div>
+        </div>
+      </div>
+
+    <div style="margin-bottom: 16px;">
+      <p class="w3-wide" style="text-transform: capitalize; font-size: 18px;">JavaScript</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" style="width: 0%;" data-percentage="35">
+          <span style="font-size: 18px;">35%</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <p class="w3-wide" style="text-transform: capitalize; font-size: 18px;">PHP</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" style="width: 0%;" data-percentage="30">
+          <span style="font-size: 18px;">30%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <!-- formulaire -->  
+   <div id="contact" style="max-width: 800px; margin: auto;">
+    <h2 style="text-align: center;">Me contacter :</h2>
+    <form action="/action_page.php" target="_blank" style="max-width: 800px; margin: auto;">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nom" required name="Nom" style="margin-bottom: 10px;"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email" style="margin-bottom: 10px;"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Sujet" required name="Sujet" style="margin-bottom: 10px;"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message" style="margin-bottom: 20px;"></p>
+        <p>
+            <button class="w3-button w3-black w3-padding-large" style="color:#007bff; width: 100%;" type="submit">
+                ENVOYER
+            </button>
+        </p>
+    </form>
+</div>
+
+
+  </div>
+  <footer style="background-color: rgba(0, 188, 255, 0.9); padding: 20px; text-align: center; width: 100%; margin-top: 52px;">
+        <!-- Liens vers les réseaux sociaux avec les icônes -->
+        <div style="font-size: 24px;">
+            <a href="https://www.linkedin.com/in/enzo-bammé-321b8a253/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <p>Réalisé par Bammé</p>
+    </footer>
+</div>
+
+  
+  <!-- Mes scripts JavaScript =) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    function animateProgressBar() {
+      const progressBars = document.querySelectorAll('.progress-bar-fill');
+
+      progressBars.forEach(progressBar => {
+        const percentage = parseInt(progressBar.getAttribute('data-percentage'));
+        let currentPercentage = 0;
+
+        const interval = setInterval(() => {
+          if (currentPercentage >= percentage) {
+            clearInterval(interval);
+          } else {
+            currentPercentage++;
+            progressBar.style.width = currentPercentage + '%';
+            progressBar.textContent = currentPercentage + '%';
+          }
+        }, 10); // Interval plus court pour accélérer l'animation
+      });
+    }
+
+    animateProgressBar();
+  });
+  
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 80 ||
+      document.documentElement.scrollTop > 80
+    ) {
+      document.getElementById("navbar").classList.add("transparent-header");
+    } else {
+      document.getElementById("navbar").classList.remove("transparent-header");
+    }
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+@import url(https://fonts.googleapis.com/css?family=Expletus+Sans);
+
+/* Basic resets */
+
+* { 
+	margin:0; padding:0; 
+	box-sizing: border-box;
+}
+li {
+       min-width: 360px;
+	list-style-type: none;
+	padding-right: 5.3333333%;
+}
+
+li:nth-child(even) { margin-bottom: 5em;}
+
+h2 {
+	margin: 0 0 1.5em;
+	border-bottom: 1px solid #ccc;
+	padding: 0 0 .25em;
+}
+
+/* Styling an indeterminate progress bar */
+
+progress:not(value) {
+	/* Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. */
+}
+
+/* Styling the determinate progress element */
+
+progress[value] {
+	/* Get rid of the default appearance */
+	appearance: none;
+	
+	/* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
+	border: none;
+	
+	/* Add dimensions */
+	width: 100%; height: 20px;
+	
+	/* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
+	  background-color: whiteSmoke;
+	  border-radius: 3px;
+	  box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+	
+	/* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
+	color: royalblue;
+	
+	position: relative;
+	margin: 0 0 1.5em; 
+}
+
+/*
+Webkit browsers provide two pseudo classes that can be use to style HTML5 progress element.
+-webkit-progress-bar -> To style the progress element container
+-webkit-progress-value -> To style the progress element value.
+*/
+
+progress[value]::-webkit-progress-bar {
+	background-color: whiteSmoke;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+}
+
+progress[value]::-webkit-progress-value {
+	position: relative;
+	
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius:3px;
+	
+	/* Let's animate this */
+	animation: animate-stripes 5s linear infinite;
+}
+
+@keyframes animate-stripes { 100% { background-position: -100px 0; } }
+
+/* Let's spice up things little bit by using pseudo elements. */
+
+progress[value]::-webkit-progress-value:after {
+	/* Only webkit/blink browsers understand pseudo elements on pseudo classes. A rare phenomenon! */
+	content: '';
+	position: absolute;
+	
+	width:5px; height:5px;
+	top:7px; right:7px;
+	
+	background-color: white;
+	border-radius: 100%;
+}
+
+/* Firefox provides a single pseudo class to style the progress element value and not for container. -moz-progress-bar */
+
+progress[value]::-moz-progress-bar {
+	/* Gradient background with Stripes */
+	background-image:
+	-moz-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -moz-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #f44);
+	
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius:3px;
+	
+	/* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
+}
+
+/* Fallback technique styles */
+.progress-bar {
+	background-color: whiteSmoke;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+
+	/* Dimensions should be similar to the parent progress element. */
+	width: 100%; height:20px;
+}
+
+.progress-bar span {
+	background-color: royalblue;
+	border-radius: 3px;
+	
+	display: block;
+	text-indent: -9999px;
+}
+
+p[data-value] { 
+  
+  position: relative; 
+}
+
+/* The percentage will automatically fall in place as soon as we make the width fluid. Now making widths fluid. */
+
+p[data-value]:after {
+	content: attr(data-value) '%';
+	position: absolute; right:0;
+}
+
+
+
+
+
+.html5::-webkit-progress-value,
+.python::-webkit-progress-value  {
+	/* Gradient background with Stripes */
+	background-image:
+	-webkit-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -webkit-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #09c, #f44);
+}
+
+.css3::-webkit-progress-value,
+.php::-webkit-progress-value 
+{
+	/* Gradient background with Stripes */
+	background-image:
+	-webkit-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -webkit-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #09c, #ff0);
+}
+
+.jquery::-webkit-progress-value,
+.node-js::-webkit-progress-value 
+{
+	/* Gradient background with Stripes */
+	background-image:
+	-webkit-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -webkit-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #09c, #690);
+}
+
+/* Similarly, for Mozillaa. Unfortunately combining the styles for different browsers will break every other browser. Hence, we need a separate block. */
+
+.html5::-moz-progress-bar,
+.php::-moz-progress-bar {
+	/* Gradient background with Stripes */
+	background-image:
+	-moz-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -moz-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #f44);
+}
+
+.css3::-moz-progress-bar,
+.php::-moz-progress-bar 
+{
+	/* Gradient background with Stripes */
+	background-image:
+	-moz-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -moz-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #ff0);
+}
+
+.jquery::-moz-progress-bar,
+.node-js::-moz-progress-bar {
+	/* Gradient background with Stripes */
+	background-image:
+	-moz-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -moz-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #690);
+}
+
+
+@media screen and (max-width: 768px) {
+	.image-description {
+	  display: flex;
+	  flex-direction: column;
+	}
+	.w3-half {
+	  width: 100%;
+	}
+	.Cv {
+	  left: auto;
+	  top: auto;
+	  position: static;
+	  margin-top: 10px;
+	}
+  }
+
+  @media screen and (max-width: 480px) {
+	.header {
+	  padding: 10px 0;
+	}
+	h1 {
+	  font-size: 24px;
+	}
+	.texte-p {
+	  margin-top: 10px;
+	}
+	.Cv {
+	  margin-top: 10px;
+	  left: auto;
+	}
+  }
+  /* CSS pour les barres de progression */
+  
+/* CSS pour les liens du header */
+#navbar a {
+text-decoration: none;
+margin: 0 20px;
+color: black; /* Couleur du texte par défaut */
+transition: color 0.3s; /* Transition pour le changement de couleur */
+}
+
+/* Nouvelle couleur du texte au survol */
+#navbar a:hover {
+color: #00d5ff !important; /* Nouvelle couleur du texte au survol */
+}
+
+  .header a {
+  text-decoration: none;
+  margin: 0 20px;
+  color: black; /* Couleur du texte par défaut */
+  transition: color 0.3s; /* Transition pour le changement de couleur */
+}
+
+/* Nouvelle couleur du texte au survol */
+.header a:hover {
+  color: #007bff; /* Nouvelle couleur du texte au survol */
+}
+
+/* Autres styles pour le header restent inchangés */
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(245, 245, 245, 0.9);
+  padding: 20px 0;
+  text-align: center;
+  transition: background-color 0.5s;
+  z-index: 1000;
+  top: 0;
+}
+
+/* Style pour rendre le header transparent lors du scroll */
+.transparent-header {
+  background-color: rgba(245, 245, 245, 0.7);
+}
+.header a.w3-button {
+  background-color: transparent !important; /* Rendre le fond transparent */
+}
+
+/* Ajout de marge en haut du contenu pour ne pas le cacher sous le header */
+body {
+  padding-top: 80px;
+  margin: 0; /* Pour éviter tout débordement du contenu sous le header */
+}
+.progress-bar {
+width: 590%;
+background-color: #f1f1f1;
+border-radius: 10px; /* Augmentation du rayon des coins */
+margin-bottom: 20px; /* Augmentation de l'espace entre les barres */
+}
+
+
+  .progress-bar-fill {
+height: 30px; /* Augmentation de la hauteur de la barre */
+line-height: 30px; /* Ajustement de la ligne de texte verticalement centrée */
+color: white;
+text-align: center;
+border-radius: 10px; /* Augmentation du rayon des coins */
+background-color: #007bff;
+width: 0; /* Ajuster ce paramètre via JavaScript pour la progression */
+transition: width 2s ease; /* Animation de transition pour la barre de progression */
+font-size: 18px; /* Augmentation de la taille de la police */
+}
+
+
+  body, h1, h2, h3, h4, h5, h6 {
+	font-family: "Montserrat", sans-serif;
+  }
+
+  .w3-row-padding img {
+	margin-bottom: 12px;
+  }
+
+  .bgimg {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url('image/Enzo.jpg');
+	min-height: 100%;
+  }
+
+  .Cv {
+	background-color: rgb(0, 140, 255);
+	color: white;
+	border: none;
+	padding: 12px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-top: 20px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 8px;
+  }
+
+  .Cv:hover {
+	background-color: #6f3cd4; /* Darker background color on hover */
+  }
+
+  .texte-p {
+	color: rgb(255, 255, 255);
+	text-align: justify;
+	margin-top: 20px;
+  }
+
+  body, h1, h2, h3, h4, h5, h6 {
+	font-family: "Cardo", serif; /* Utilisation de la police Cardo pour les éléments textuels */
+  }
+  /* Style personnalisé pour le bouton ENVOYER */
+.w3-button {
+border: none;
+border-radius: 8px;
+outline: none;
+display: inline-block;
+padding: 12px 24px;
+margin-top: 10px;
+font-size: 16px;
+cursor: pointer;
+text-decoration: none;
+transition-duration: 0.4s;
+}
+
+.w3-button:hover {
+background-color: #00ccff;
+color: #ffffff; /* Changement de couleur du texte au survol */
+}
