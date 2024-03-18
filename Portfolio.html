@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/demo.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
+
 .container {
   max-width: 100%;
   overflow-x: hidden;
@@ -90,7 +91,7 @@
 
 
 #navbar a:hover {
-  color: #ff0000 !important; 
+  color: #00c8ff !important; 
 }
 
     .header a {
@@ -107,7 +108,7 @@
   .header {
     position: fixed;
     width: 100%;
-    background-color: rgba(245, 245, 245, 0.9);
+    background-color: rgba(255, 242, 226, 0.78);
     padding: 20px 0;
     text-align: center;
     transition: background-color 0.5s;
@@ -160,7 +161,6 @@
       font-family: "Cardo", sans-serif;
     }
     h1, h2, h3, h4, h5, h6 {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
   padding: 10px; 
 }
     .w3-row-padding img {
@@ -229,7 +229,7 @@
 <div class="container">
     <!-- Header -->
     <header class="header" id="navbar">
-      <h1>Mon Portfolio</h1>
+      <h1>Etudiant Développement Web</h1>
       <a href="#" class="w3-button">Home</a>
       <a href="#portfolio" class="w3-button">Portfolio</a>
       <a href="#contact" class="w3-button">Contact</a>
@@ -247,12 +247,11 @@
         </div>
         <div class="w3-half">
           <header class="w3-container" style="padding:128px 16px" id="home">
-            <h1 class="w3-jumbo"><b style="color: white;">Bammé Enzo</b></h1>
             <h2 style="color: white;">Développeur Web</h2>
-            <p class="texte-p">En tant qu'étudiant intéressé par le développement web, j'ai acquis les bases du HTML et du CSS. Mon objectif est de maîtriser ces langages pour créer des sites web attrayants. Même si je suis débutant, ma motivation à apprendre et à progresser est inébranlable. J'ai hâte d'acquérir des compétences en JavaScript pour rendre mes sites plus interactifs. Mon portfolio reflète mes compétences actuelles et mon parcours d'apprentissage.</p>
+            <p class="texte-p">Etudiant en 2ème année de Bachelor dev web à MyDigitalSchool. Au cours des 2 premières années de ma formation, j'ai acquis des compétences en : HTML,CSS,JavaScript et PHP. A la recherche d'un stage de 2 mois à partir d'avril 2024. Empathique et à l'écoute, je suis sérieux et m'investi à 100% dans tout ce que j'entreprend.</p>
             <!-- Bouton CV -->
             <div class="cvc"> 
-              <a href="image/CV_enzo.pdf" download="NomDuCV.pdf" class="Cv">
+              <a href="image/CV.pdf" download="NomDuCV.pdf" class="Cv">
                 <i class="fa fa-download"></i> Télécharger mon CV
               </a>
             </div>
@@ -263,97 +262,81 @@
   </div>
   
 
-<!-- Projets -->
 <div class="projects" style="display: flex;">
-    <div class="w3-padding-32 w3-content" id="portfolio">
-        <h2 class="texte-P" style="text-align: center;">Mes Projets</h2>
-        <hr class="w3-opacity">
-        <div class="w3-row-padding" style="display: flex; justify-content: space-between;">
-            <!-- Premier Projet -->
-            <div class="project-description" style="flex: 1; display: flex; flex-direction: column; align-items: center; margin-right: 20px;">
-                <a href="file:///Users/enzobamme/Desktop/Olympe/index.html">
-                    <img src="image/Site.png" style="width: 100%">
-                </a>
-                <div style="text-align: center; margin-bottom: 10px;">
-                    <p><span style="font-weight: bold;">Olympe Communication</span></p>
-                </div>
-                <div style="text-align: center;">
-                    <p class="project-info">
-                        Ce projet fut conçu lors de mon stage. Il s'agit d'un site web interactif mettant en valeur les services de l'entreprise.
-                    </p>
-                </div>
-            </div>
-            <!-- Deuxième Projet -->
-            <div class="project-description" style="flex: 1; display: flex; flex-direction: column; align-items: center; margin-right: 20px;">
-                <a href="file:///Users/enzobamme/Desktop/ENKI/dist/index.html">
-                    <img src="image/site2.png" style="width: 100%">
-                </a>
-                <div style="text-align: center; margin-bottom: 10px;">
-                    <p><span style="font-weight: bold;">Enki</span></p>
-                </div>
-                <div style="text-align: center;">
-                    <p class="project-info">
-                       Enki est un site avec des animations attrayantes en javascript et css réalisé lors d'un partiel avec un thème libre.
-                    </p>
-                </div>
-            </div>
-            <!-- Troisième Projet -->
-            <div class="project-description" style="flex: 1; display: flex; flex-direction: column; align-items: center;">
-                <video width="100%" controls>
-                    <source src="image/neuille.mp4" type="video/mp4">
-                </video>
-                <div style="text-align: center; margin-bottom: 10px;">
-                    <p><span style="font-weight: bold; position: relative; top: 6px;">Créative Lab</span></p>
-               </div>
-                <div style="text-align: center;">
-                    <p class="project-info">
-                        Projet vidéo réalisé lors d'un projet dont le thème fut l'eau. A l'aide d'after effect j'ai réalisé l'intro de notre vidéo.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Compétences -->
-<div class="skills-container" style="position: relative; left: 26%;">
-    <h2 style="color: black; position: relative; right: 26%;">Mes compétences</h2>
-    <!-- Première ligne horizontale -->
-    <hr class="w3-opacity" style="width: 10%; position: relative; left: -122px;">
-    
-  <div class="skills" style="display: inline-block; text-align: left;">
-    <div style="margin-bottom: 16px;">
-      <p class="w3-wide" style="text-transform: capitalize; font-size: 18px;">HTML</p>
-      <div class="progress-bar">
-        <div class="progress-bar-fill" style="width: 0%;" data-percentage="40">
-          <span style="font-size: 18px;">40%</span>
-        </div>
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    <h2 class="texte-P" style="text-align: center; position: relative; top: -5%;">Mes Projets</h2>
+    <hr class="w3-opacity">
+    <div class="w3-row-padding" style="display: flex; justify-content: space-between;">
+      <div class="project-description" style="flex: 1; display: flex; flex-direction: column; align-items: center; margin-right: 20px;">
+          <a href="file:///Users/enzobamme/Desktop/Olympe/index.html">
+              <img src="image/Site.png" style="width: 100%">
+          </a>
+          <div style="text-align: center; margin-bottom: 10px;">
+              <p><span style="font-weight: bold;">Olympe Communication</span></p>
+          </div>
+          <div style="text-align: center;">
+              <p class="project-info">
+                  Ce projet fut conçu lors de mon stage. Il s'agit d'un site web interactif mettant en valeur les services de l'entreprise.
+              </p>
+          </div>
+      </div>
+      <div class="project-description" style="flex: 1; display: flex; flex-direction: column; align-items: center; margin-right: 20px;">
+          <a href="file:///Users/enzobamme/Desktop/Sitepart/index.html">
+              <img src="image/site2.png" style="width: 100%">
+          </a>
+          <div style="text-align: center; margin-bottom: 10px;">
+              <p><span style="font-weight: bold;">Projet Pédagogique : Projet de partiel</span></p>
+          </div>
+          <div style="text-align: center;">
+              <p class="project-info" style="position: relative; padding-top: 15px;">
+                Création d'une offre fictive de box mystère autour de la cuisine du monde. Développement du site vitrine de l'offre.
+              </p>
+          </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <div style="margin-bottom: 16px;">
-        <p class="w3-wide" style="text-transform: capitalize; font-size: 18px;">CSS</p>
-        <div class="progress-bar">
-          <div class="progress-bar-fill" style="width: 0%;" data-percentage="50"> <!-- Ajout de l'attribut data-percentage -->
-            <span style="font-size: 18px;">50%</span> <!-- Le texte affiché initialement -->
+<div class="container">
+  <div class="skills-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 300px; position: relative; left: 1%;">
+    <h2>Mes compétences</h2>  <hr class="w3-opacity" style="width: 10%; position: relative; left: -122px;">
+    <div class="skills" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+      <div style="margin-bottom: 32px;">
+        <div style="margin-bottom: 32px; margin-right: 20px;">
+        <div class="progress-circle" style="background-color: #ff9100; width: 200px; height: 200px; border-radius: 50%; display: inline-block; text-align: center; line-height: 200px;">
+          HTML
           </div>
         </div>
       </div>
 
-    <div style="margin-bottom: 16px;">
-      <p class="w3-wide" style="text-transform: capitalize; font-size: 18px;">JavaScript</p>
-      <div class="progress-bar">
-        <div class="progress-bar-fill" style="width: 0%;" data-percentage="30">
-          <span style="font-size: 18px;">30%</span>
+      <div style="margin-bottom: 32px;">
+        <div style="margin-bottom: 32px; margin-right: 20px;">
+        <div class="progress-circle" style="background-color: #00b7ff; width: 200px; height: 200px; border-radius: 50%; display: inline-block; text-align: center; line-height: 200px;">
+          CSS
+        </div>
         </div>
       </div>
-    </div>
 
-    <div style="margin-bottom: 16px;">
-      <p class="w3-wide" style="text-transform: capitalize; font-size: 18px;">PHP</p>
-      <div class="progress-bar">
-        <div class="progress-bar-fill" style="width: 0%;" data-percentage="30">
-          <span style="font-size: 18px;">30%</span>
+      <div style="margin-bottom: 32px;">
+        <div style="margin-bottom: 32px; margin-right: 20px;">
+        <div class="progress-circle" style="background-color: #ffd700; width: 200px; height: 200px; border-radius: 50%; display: inline-block; text-align: center; line-height: 200px;">
+          JavaScript
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 32px;">
+        <div style="margin-bottom: 32px; margin-right: 20px;">
+        <div class="progress-circle" style="background-color: #3f6496; width: 200px; height: 200px; border-radius: 50%; display: inline-block; text-align: center; line-height: 200px;">
+          PHP
+        </div>
+        </div>
+      </div>
+      <div style="margin-bottom: 32px;">
+        <div style="margin-bottom: 32px; margin-right: 20px;">
+        <div class="progress-circle" style="background-color: rgba(92, 91, 93, 0.62); width: 200px; height: 200px; border-radius: 50%; display: inline-block; text-align: center; line-height: 200px;">
+          CMS
+        </div>
         </div>
       </div>
     </div>
