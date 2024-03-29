@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Portfoneuile</title>
+    <title>EnzoB</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -113,7 +113,8 @@
     text-align: center;
     transition: background-color 0.5s;
     z-index: 1000;
-    top: 0;
+    top: -12%;
+    height: 33%;
   }
 
  .transparent-header {
@@ -158,7 +159,7 @@
 
 
     body, h1, h2, h3, h4, h5, h6 {
-      font-family: "Cardo", sans-serif;
+      font-family: "Roboto", sans-serif;
     }
     h1, h2, h3, h4, h5, h6 {
   padding: 10px; 
@@ -175,24 +176,6 @@
       min-height: 100%;
     }
 
-    .Cv {
-      background-color: rgb(0, 140, 255);
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin-top: 20px;
-      transition-duration: 0.4s;
-      cursor: pointer;
-      border-radius: 8px;
-    }
-
-    .Cv:hover {
-      background-color: #6f3cd4; 
-    }
 
     .texte-p {
       color: rgb(255, 255, 255);
@@ -221,7 +204,110 @@
   background-color: #00ccff;
   color: #ffffff; 
 }
+.skills img {
+  width: 80px; /* Adjust width as desired */
+  margin: 0 10px; /* Add spacing between logos */
+}
 
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+  cursor: pointer;
+  /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  top: 15px;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  );
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%;
+  }
+
+  50% {
+    background-position: 70% 100%;
+  }
+
+  100% {
+    background-position: 31% 0%;
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+    /* Top-left */ var(--border-width)
+      calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+    /* Top-left */ calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+ 
   </style>
 </head>
 <body>
@@ -229,12 +315,12 @@
 <div class="container">
     <!-- Header -->
     <header class="header" id="navbar">
-      <h1>Etudiant Développement Web</h1>
-      <a href="#" class="w3-button">Home</a>
-      <a href="#portfolio" class="w3-button">Portfolio</a>
+      <img src="image/Logo.png" alt="Logo" style="height: 250px;> <!-- Remplacez "chemin/vers/votre/logo.png" par le chemin de votre logo -->
+      <a href="#" class="w3-button">Accueil</a>
+      <a href="#portfolio" class="w3-button">Réalisations</a>
       <a href="#contact" class="w3-button">Contact</a>
-
-    </header>
+  </header>
+  
   <!-- Main Content -->
   <div class="image-description-container">
     <!-- Image et Description -->
@@ -248,11 +334,11 @@
         <div class="w3-half">
           <header class="w3-container" style="padding:128px 16px" id="home">
             <h2 style="color: white;">Développeur Web</h2>
-            <p class="texte-p">Etudiant en 2ème année de Bachelor dev web à MyDigitalSchool. Au cours des 2 premières années de ma formation, j'ai acquis des compétences en : HTML,CSS,JavaScript et PHP. A la recherche d'un stage de 2 mois à partir d'avril 2024. Empathique et à l'écoute, je suis sérieux et m'investi à 100% dans tout ce que j'entreprend.</p>
+            <p class="texte-p">Etudiant en 2ème année de Bachelor dev web à MyDigitalSchool. Au cours des 2 premières années de ma formation, j'ai acquis des compétences en : HTML,CSS,JavaScript et PHP. Je suis à recherche d'un stage de 2 mois à partir d'avril 2024. Empathique et à l'écoute, je suis sérieux et m'investi à 100% dans tout ce que j'entreprend.</p>
             <!-- Bouton CV -->
             <div class="cvc"> 
               <a href="image/CV.pdf" download="NomDuCV.pdf" class="Cv">
-                <i class="fa fa-download"></i> Télécharger mon CV
+                <button class="btn">Voir CV</button>
               </a>
             </div>
           </header>
@@ -261,10 +347,9 @@
     </div>
   </div>
   
-
 <div class="projects" style="display: flex;">
   <div class="w3-padding-32 w3-content" id="portfolio">
-    <h2 class="texte-P" style="text-align: center; position: relative; top: -5%;">Mes Projets</h2>
+    <h2 class="texte-P" style="text-align: center; position: relative; top: -5%;">Mes Réalisations</h2>
     <hr class="w3-opacity">
     <div class="w3-row-padding" style="display: flex; justify-content: space-between;">
       <div class="project-description" style="flex: 1; display: flex; flex-direction: column; align-items: center; margin-right: 20px;">
@@ -276,7 +361,7 @@
           </div>
           <div style="text-align: center;">
               <p class="project-info">
-                  Ce projet fut conçu lors de mon stage. Il s'agit d'un site web interactif mettant en valeur les services de l'entreprise.
+                  Ce projet fut conçu dans le cadre de la création d'une agence de communication. Il s'agit d'un site web interactif avec des animations conçu en javascript html et css il met en valeur les services de l'entreprise ainsi que leur blog.
               </p>
           </div>
       </div>
@@ -285,11 +370,11 @@
               <img src="image/site2.png" style="width: 100%">
           </a>
           <div style="text-align: center; margin-bottom: 10px;">
-              <p><span style="font-weight: bold;">Projet Pédagogique : Projet de partiel</span></p>
+              <p><span style="font-weight: bold;">Overseas</span></p>
           </div>
           <div style="text-align: center;">
               <p class="project-info" style="position: relative; padding-top: 15px;">
-                Création d'une offre fictive de box mystère autour de la cuisine du monde. Développement du site vitrine de l'offre.
+                Création d'une offre de box mystère autour de la cuisine du monde. Développement du site vitrine de l'offre en mettant en place différents outils.
               </p>
           </div>
       </div>
@@ -297,55 +382,27 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="skills-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 300px; position: relative; left: 1%;">
-    <h2>Mes compétences</h2>  <hr class="w3-opacity" style="width: 10%; position: relative; left: -122px;">
-    <div class="skills" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-      <div style="margin-bottom: 32px;">
-        <div style="margin-bottom: 32px; margin-right: 20px;">
-        <div class="progress-circle" style="background-color: #ff9100; width: 200px; height: 200px; border-radius: 50%; display: inline-block; text-align: center; line-height: 200px;">
-          HTML
-          </div>
-        </div>
+<div class="skills-container" style=" align-items: center; justify-content: space-around; margin-bottom: 50px;">
+    <h2 style="position: relative; right: 10.2%;">Mes compétences</h2>
+    <br>
+    <hr class="w3-opacity" style="width: 10%;">
+    <div class="skills" style="display: flex; position: relative; left: 26%;">
+      <div>
+        <img src="image/logo_HTML.png" alt="HTML Logo">
       </div>
-
-      <div style="margin-bottom: 32px;">
-        <div style="margin-bottom: 32px; margin-right: 20px;">
-        <div class="progress-circle" style="background-color: #00b7ff; width: 200px; height: 200px; border-radius: 50%; display: inline-block; text-align: center; line-height: 200px;">
-          CSS
-        </div>
-        </div>
+      <div>
+        <img src="image/logo_CSS.png" alt="CSS Logo">
       </div>
-
-      <div style="margin-bottom: 32px;">
-        <div style="margin-bottom: 32px; margin-right: 20px;">
-        <div class="progress-circle" style="background-color: #ffd700; width: 200px; height: 200px; border-radius: 50%; display: inline-block; text-align: center; line-height: 200px;">
-          JavaScript
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-bottom: 32px;">
-        <div style="margin-bottom: 32px; margin-right: 20px;">
-        <div class="progress-circle" style="background-color: #3f6496; width: 200px; height: 200px; border-radius: 50%; display: inline-block; text-align: center; line-height: 200px;">
-          PHP
-        </div>
-        </div>
-      </div>
-      <div style="margin-bottom: 32px;">
-        <div style="margin-bottom: 32px; margin-right: 20px;">
-        <div class="progress-circle" style="background-color: rgba(92, 91, 93, 0.62); width: 200px; height: 200px; border-radius: 50%; display: inline-block; text-align: center; line-height: 200px;">
-          CMS
-        </div>
-        </div>
-      </div>
+      <div>
+        <img src="image/logo_js.png" alt="JavaScript Logo"> </div>
+      <div>
+        <img src="image/PHP-logo.png" alt="PHP Logo"> </div>
     </div>
   </div>
-</div>
-
+  
    <!-- formulaire -->  
    <div id="contact" style="max-width: 800px; margin: auto;">
-    <h2 style="text-align: center;">Me contacter :</h2>
+    <h2 style="text-align: center;">Démarrons un projet ensemble :</h2>
     <form action="/action_page.php" target="_blank" style="max-width: 800px; margin: auto;">
         <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nom" required name="Nom" style="margin-bottom: 10px;"></p>
         <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email" style="margin-bottom: 10px;"></p>
@@ -358,7 +415,6 @@
         </p>
     </form>
 </div>
-
 
   </div>
   <footer style="background-color: rgba(0, 188, 255, 0.9); padding: 20px; text-align: center; width: 100%; margin-top: 52px;">
